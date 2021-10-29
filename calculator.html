@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+</head>
+<body>
+<p>Число 1: <input type="text" id="n1"> </p>
+<p>Число 2: <input type="text" id="n2"> </p>
+<button onclick="plus()">Плюс</button>
+<button onclick="minus()">Минус</button>
+<hr>
+<div id = 'out'>Результат: </div>
+</body>
+<script>
+function plus () {
+    var num1, num2, result;
+    num1 = document.getElementById('n1').value;
+    num1 = parseInt(num1);
+    num2 = document.getElementById('n2').value;
+    num2= parseInt(num2);
+    result =  num1 + num2
+    document.getElementById('out').innerHTML= result;
+}
+function minus(){
+    var num1, num2, result
+    num1= document.getElementById('n1').value;
+    num2= document.getElementById('n2').value;
+    result = num1 - num2;
+    document.getElementById('out').innerHTML= result;
+}
+</script>
+</html>
