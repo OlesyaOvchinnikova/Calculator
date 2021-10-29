@@ -7,10 +7,12 @@
 <body>
 <p>Число 1: <input type="text" id="n1"> </p>
 <p>Число 2: <input type="text" id="n2"> </p>
-<button onclick="plus()">Плюс</button>
-<button onclick="minus()">Минус</button>
+<button onclick="plus()">+</button>
+<button onclick="minus()">-</button>
+<button onclick="multiply()">*</button>
+<button onclick="divide()">/</button>
 <hr>
-<div id = 'out'>Результат: </div>
+<div id = 'out'>Результат:</div>
 </body>
 <script>
 function plus () {
@@ -28,6 +30,20 @@ function minus(){
     num2= document.getElementById('n2').value;
     result = num1 - num2;
     document.getElementById('out').innerHTML= result;
+}
+function multiply() {
+  var num1, num2, result
+  num1 = document.getElementById('n1').value;
+  num2 = document.getElementById('n2').value;
+  result = num1 * num2
+    document.getElementById('out').innerHTML=result;
+}
+function divide() {
+    var num1, num2, result
+    num1 = document.getElementById('n1').value;
+    num2 = document.getElementById('n2').value;
+    result= num1 / num2;
+    document.getElementById('out').innerHTML=result;
 }
 </script>
 </html>
