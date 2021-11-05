@@ -3,47 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>calculator</title>
+    <style>
+        body{
+            background-color: beige;
+
+        }
+        input {
+            background-color: azure ;
+            width: 90px;
+            height: 15px
+        }
+    h1{
+        font-size: 35px;
+        font-family: Arial;
+        color: black;
+    }
+   h2 {
+       font-family: Arial;
+       color: black ;
+       font-size: 25px;
+   }
+   p {
+       font-family: Arial;
+       color: black;
+       font-size: 17px;
+       margin: 10px;
+   }
+   button{
+       font-family: Arial;
+       color: brown ;
+       font-size: 15px;
+   }
+   div {
+       font-family: Arial;
+       color: black ;
+       font-size: 15px;
+       padding-left: 15px;
+       padding-top: 05px;
+       margin: 10px;
+   }
+   hr{
+       margin: 15px;
+   }
+    </style>
 </head>
 <body>
-<p>Число 1: <input type="text" id="n1"> </p>
-<p>Число 2: <input type="text" id="n2"> </p>
+<h1> Введите числа в строку и получите результат</h1>
+<div>Введите число 1: <input type="text" id="n1"> </div>
+<div>Введите число 2: <input type="text" id="n2"> </div>
 <button onclick="plus()">+</button>
 <button onclick="minus()">-</button>
 <button onclick="multiply()">*</button>
 <button onclick="divide()">/</button>
-<hr>
+<div>Возведение в степень: <input type = 'text' id="n3"></div>
+<button onclick="square()">x²</button>
+
+    <hr>
 <div id = 'out'>Результат:</div>
-</body>
-<script>
-function plus () {
-    var num1, num2, result;
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
-    num2 = document.getElementById('n2').value;
-    num2= parseInt(num2);
-    result =  num1 + num2
-    document.getElementById('out').innerHTML= result;
-}
-function minus(){
-    var num1, num2, result
-    num1= document.getElementById('n1').value;
-    num2= document.getElementById('n2').value;
-    result = num1 - num2;
-    document.getElementById('out').innerHTML= result;
-}
-function multiply() {
-  var num1, num2, result
-  num1 = document.getElementById('n1').value;
-  num2 = document.getElementById('n2').value;
-  result = num1 * num2
-    document.getElementById('out').innerHTML=result;
-}
-function divide() {
-    var num1, num2, result
-    num1 = document.getElementById('n1').value;
-    num2 = document.getElementById('n2').value;
-    result= num1 / num2;
-    document.getElementById('out').innerHTML=result;
-}
+
+<hr>
+<h2>На каком языке программирования был написан данный скрипт?</h2>
+
+<div id= "first"> * C++</div>
+<div id= "second"> * Python</div>
+<div id= "third"> * Java</div>
+<div id= "four"> * Java Script</div>
+<div id= "five"> * Scala</div>
+
+
+<button onclick="language()">Узнать результат</button>
+<hr>
+
+<h3>Решите задачки:</h3>
+<p id = 'task1'>1. На одном дереве сидело 40 сорок. Проходил охотник, выстрелил и убил 6 сорок. Сколько сорок осталось на дереве? <button onclick="task1()">Ответ</button></p>
+<p id = 'task2'>2. Есть два ведра емкостью 4 и 9 литров. Как с их помощью принести из речки ровно 6 литров воды? <button onclick="task2()">Ответ</button></p>
+<p id = 'task3'>3. В каждом из 4 углов комнаты сидит кошка. Напротив каждой из этих кошек сидят три кошки. Сколько всего в этой комнате кошек? <button onclick="task3()">Ответ</button></p>
+
+
+<script src="calc.js">
 </script>
+</body>
 </html>
